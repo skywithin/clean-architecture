@@ -4,9 +4,9 @@ public sealed record ValidationError : Error
 {
     public ValidationError(Error[] errors)
         : base(
-            "Validation.General",
-            "One or more validation errors occurred",
-            ErrorType.Validation)
+            code: "Validation.General",
+            description: "One or more validation errors occurred",
+            type: ErrorType.Validation)
     {
         Errors = errors;
     }
